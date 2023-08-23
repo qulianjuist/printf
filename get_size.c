@@ -3,7 +3,7 @@
 /**
 * get_size - Calculate the size to cast the argument
 * @format: Formatted string containing the arguments
-* @i: Current index in the format string
+* @i: Current index in the format string to be printed
 *
 * Return: Size specifier
 */
