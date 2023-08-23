@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
-* is_printable - Check if a character is printable
-* @c: Character to be evaluated
-* Return: 1 if c is printable, 0 otherwise
+* is_printable - Check if a character is printable.
+* @c: Character to be evaluated.
+* Return: 1 if c is printable, 0 otherwise.
 */
 
 int is_printable(char c)
