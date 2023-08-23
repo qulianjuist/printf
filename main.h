@@ -20,7 +20,8 @@
 #define S_SHORT 1
 
 /* Struct to hold format and corresponding function */
-struct fmt {
+struct fmt
+{
     char fmt;
     int (*fn)(va_list, char[], int, int, int, int);
 };
