@@ -11,7 +11,8 @@
  * @size: Size specifier
  * Return: Number of characters printed.
  */
-int print_pointer(va_list types, char buffer[], int flags, int width, int precision, int size)
+int print_pointer(va_list types, char buffer[],
+		int flags, int width, int precision, int size)
 {
 char extra_c = 0, padd = ' ';
 int ind = BUFF_SIZE - 2, length = 2, padd_start = 1; /* length=2, for '0x' */
@@ -46,12 +47,13 @@ extra_c = ' ', length++;
 
 ind++;
 
-return (write_pointer(buffer, ind, length, width, flags, padd, extra_c, padd_start));
+return (write_pointer(buffer, ind, length,
+			width, flags, padd, extra_c, padd_start));
 }
 
 /************************* PRINT NON PRINTABLE *************************/
 /**
- * print_non_printable - Prints ASCII codes in hexadecimal of non-printable characters
+ * print_non_printable - Prints ASCII codes in hexa of non-printable char
  * @types: List of arguments
  * @buffer: Buffer array for printing
  * @flags: Active flags
@@ -60,7 +62,8 @@ return (write_pointer(buffer, ind, length, width, flags, padd, extra_c, padd_sta
  * @size: Size specifier
  * Return: Number of characters printed
  */
-int print_non_printable(va_list types, char buffer[], int flags, int width, int precision, int size)
+int print_non_printable(va_list types, char buffer[],
+		int flags, int width, int precision, int size)
 {
 int i = 0, offset = 0;
 char *str = va_arg(types, char *);
@@ -98,8 +101,9 @@ return (write(1, buffer, i + offset));
  * @precision: Precision specification
  * @size: Size specifier
  * Return: Number of characters printed
- */
-int print_reverse(va_list types, char buffer[], int flags, int width, int precision, int size)
+*/
+int print_reverse(va_list types, char buffer[],
+		int flags, int width, int precision, int size)
 {
 char *str;
 int i, count = 0;
@@ -141,7 +145,8 @@ return (count);
  * @size: Size specifier
  * Return: Number of characters printed
  */
-int print_rot13string(va_list types, char buffer[], int flags, int width, int precision, int size)
+int print_rot13string(va_list types, char buffer[],
+		int flags, int width, int precision, int size)
 {
 char x;
 char *str;
