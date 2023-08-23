@@ -2,16 +2,17 @@
 
 /************************* WRITE HANDLE *************************/
 /**
- * handle_write_char - Print a character
- * @c: Character to be printed
- * @buffer: Buffer array to handle print
- * @flags: Active flags
- * @width: Width specifier
- * @precision: Precision specifier
- * @size: Size specifier
+ * handle_write_char - Print a character.
+ * @c: Character to be printed.
+ * @buffer: Buffer array to handle print.
+ * @flags: Active flags.
+ * @width: Width specifier.
+ * @precision: Precision specifier.
+ * @size: Size specifier.
  *
  * Return: Number of characters printed.
 */
+
 int handle_write_char(char c, char buffer[],
 		int flags, int width, int precision, int size)
 {
